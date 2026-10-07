@@ -1,12 +1,12 @@
 @import "tailwindcss";
 
 :root {
-  --background: #05080f;
+  --background: #050814;
   --foreground: #f1f5f9;
   --primary: #0ea5e9;
   --primary-teal: #0d9488;
-  --brand-purple: #7e22ce;
-  --brand-gold: #d97706;
+  --biomechanic-orange: #ff7a00;
+  --biomechanic-amber: #f97316;
 }
 
 @theme inline {
@@ -21,11 +21,11 @@ html {
 }
 
 body {
-  background-color: #060910;
+  background-color: #050814;
   color: #f1f5f9;
   font-family: var(--font-jakarta, ui-sans-serif, system-ui, sans-serif);
   overflow-x: hidden;
-  selection-background-color: #0d9488;
+  selection-background-color: #f97316;
   selection-color: #ffffff;
 }
 
