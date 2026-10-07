@@ -17,6 +17,24 @@ import {
   CheckCircle2,
 } from "lucide-react";
 
+const InstagramIcon = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg
+    viewBox="0 0 24 24"
+    width="20"
+    height="20"
+    stroke="currentColor"
+    strokeWidth="1.5"
+    fill="none"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    {...props}
+  >
+    <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+  </svg>
+);
+
 // Áreas de Cuidado (Círculos e Destaques - Seção 2)
 const CARE_AREAS = [
   {
@@ -590,6 +608,48 @@ export default function Home() {
             </div>
 
           </div>
+        </div>
+      </section>
+
+      {/* =========================================================================
+          SEÇÃO INSTAGRAM OFICIAL (EDITORIAL & MINIMALISTA)
+          ========================================================================= */}
+      <section className="py-14 sm:py-20 relative border-t border-white/5 bg-[#0C0C0F]">
+        <div className="max-w-7xl mx-auto px-6 sm:px-12 lg:px-16">
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            className="p-8 sm:p-10 rounded-3xl border border-white/10 bg-[#121216]/60 backdrop-blur-md flex flex-col md:flex-row items-center justify-between gap-6 hover:border-[#C4A482]/30 transition-all duration-500"
+          >
+            <div className="flex flex-col sm:flex-row items-center sm:items-start md:items-center gap-5 text-center sm:text-left">
+              <div className="w-12 h-12 rounded-2xl bg-[#0E0E11] border border-white/10 flex items-center justify-center text-[#C4A482] shrink-0">
+                <InstagramIcon className="w-5 h-5" />
+              </div>
+              <div>
+                <p className="text-xs uppercase tracking-[0.2em] text-[#8E8A83] mb-1 font-light">
+                  Acompanhe nossa rotina clínica e dicas de postura
+                </p>
+                <h3
+                  style={{ fontFamily: 'var(--font-serif), "Cormorant Garamond", Georgia, serif' }}
+                  className="text-2xl sm:text-3xl font-light text-[#F2EFEB] tracking-wide"
+                >
+                  @colunaraquiropraxia
+                </h3>
+              </div>
+            </div>
+
+            <a
+              href="https://www.instagram.com/colunaraquiropraxia/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2.5 px-7 py-3 rounded-full border border-[#C4A482]/40 text-[#D4B996] text-xs uppercase tracking-[0.16em] hover:bg-[#C4A482] hover:text-[#0E0E11] transition-all duration-300 shrink-0"
+            >
+              <span>Seguir no Instagram</span>
+              <span className="text-sm">↗</span>
+            </a>
+          </motion.div>
         </div>
       </section>
 
