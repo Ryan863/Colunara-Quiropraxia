@@ -1,18 +1,18 @@
 @import "tailwindcss";
 
 :root {
-  --background: #050814;
-  --foreground: #f1f5f9;
-  --primary: #0ea5e9;
-  --primary-teal: #0d9488;
-  --biomechanic-orange: #ff7a00;
-  --biomechanic-amber: #f97316;
+  --background: #0E0E11;
+  --foreground: #F2EFEB;
+  --color-sand: #C4A482;
+  --color-sand-light: #D4B996;
+  --color-sand-dark: #A88B68;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-jakarta, ui-sans-serif, system-ui, sans-serif);
+  --font-serif: var(--font-serif, "Cormorant Garamond", Georgia, serif);
 }
 
 html {
@@ -21,73 +21,46 @@ html {
 }
 
 body {
-  background-color: #050814;
-  color: #f1f5f9;
+  background-color: #0E0E11;
+  color: #E6E2DC;
   font-family: var(--font-jakarta, ui-sans-serif, system-ui, sans-serif);
   overflow-x: hidden;
-  selection-background-color: #f97316;
-  selection-color: #ffffff;
+  selection-background-color: #C4A482;
+  selection-color: #0E0E11;
 }
 
 ::selection {
-  background: rgba(13, 148, 136, 0.4);
-  color: #ffffff;
+  background: rgba(196, 164, 130, 0.4);
+  color: #FFFFFF;
 }
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #060910;
+  background: #0E0E11;
 }
 ::-webkit-scrollbar-thumb {
-  background: #1e293b;
-  border-radius: 4px;
+  background: #25242A;
+  border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #0d9488;
-}
-
-/* Aurora Animation */
-@keyframes aurora {
-  from {
-    background-position: 50% 50%, 50% 50%;
-  }
-  to {
-    background-position: 350% 50%, 350% 50%;
-  }
-}
-
-.animate-aurora {
-  animation: aurora 60s linear infinite;
+  background: #C4A482;
 }
 
 /* Shimmer & Glow keyframes */
 @keyframes pulseGlow {
   0%, 100% {
-    opacity: 0.4;
+    opacity: 0.35;
     transform: scale(1);
   }
   50% {
-    opacity: 0.8;
-    transform: scale(1.05);
+    opacity: 0.65;
+    transform: scale(1.04);
   }
 }
 
 .animate-pulse-glow {
-  animation: pulseGlow 5s ease-in-out infinite;
-}
-
-@keyframes spinePulse {
-  0%, 100% {
-    filter: drop-shadow(0 0 15px rgba(239, 68, 68, 0.5));
-  }
-  50% {
-    filter: drop-shadow(0 0 28px rgba(249, 115, 22, 0.8));
-  }
-}
-
-.animate-spine-pulse {
-  animation: spinePulse 3s ease-in-out infinite;
+  animation: pulseGlow 6s ease-in-out infinite;
 }

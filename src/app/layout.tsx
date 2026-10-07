@@ -1,11 +1,19 @@
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans } from "next/font/google";
+import { Plus_Jakarta_Sans, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
 
 const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "800"],
+  weight: ["300", "400", "500", "600", "700"],
   variable: "--font-jakarta",
+  display: "swap",
+});
+
+const cormorant = Cormorant_Garamond({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  style: ["normal", "italic"],
+  variable: "--font-serif",
   display: "swap",
 });
 
@@ -98,7 +106,7 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="pt-BR" className={`${jakarta.variable} scroll-smooth`}>
+    <html lang="pt-BR" className={`${jakarta.variable} ${cormorant.variable} scroll-smooth`}>
       <head>
         <script
           type="application/ld+json"
@@ -106,7 +114,7 @@ export default function RootLayout({
         />
         <meta name="format-detection" content="telephone=no" />
       </head>
-      <body className="min-h-screen bg-[#060910] text-slate-100 antialiased selection:bg-teal-500/30 selection:text-white">
+      <body className="min-h-screen bg-[#0E0E11] text-stone-200 antialiased selection:bg-[#C4A482]/30 selection:text-white">
         {children}
       </body>
     </html>
