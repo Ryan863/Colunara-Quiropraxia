@@ -213,14 +213,14 @@ export default function Home() {
           {/* Luz quente suave de fundo atrás da coluna vertebral */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] sm:w-[850px] h-[550px] sm:h-[850px] bg-[#C4A482]/12 rounded-full blur-[160px] animate-pulse-glow" />
 
-          {/* Desktop Imagem Horizontal */}
+          {/* Desktop Imagem Horizontal (Posicionada no centro-direita para contrabalancear a tipografia à esquerda) */}
           <div
             className="hidden md:block absolute inset-0 w-full h-full"
             style={{
               maskImage:
-                "radial-gradient(ellipse 70% 65% at 50% 50%, black 35%, rgba(0,0,0,0.6) 60%, transparent 90%), linear-gradient(to bottom, black 50%, transparent 100%)",
+                "radial-gradient(ellipse 75% 70% at 62% 50%, black 38%, rgba(0,0,0,0.6) 65%, transparent 92%), linear-gradient(to bottom, black 50%, transparent 100%)",
               WebkitMaskImage:
-                "radial-gradient(ellipse 70% 65% at 50% 50%, black 35%, rgba(0,0,0,0.6) 60%, transparent 90%), linear-gradient(to bottom, black 50%, transparent 100%)",
+                "radial-gradient(ellipse 75% 70% at 62% 50%, black 38%, rgba(0,0,0,0.6) 65%, transparent 92%), linear-gradient(to bottom, black 50%, transparent 100%)",
             }}
           >
             <Image
@@ -229,7 +229,7 @@ export default function Home() {
               fill
               priority
               quality={95}
-              className="object-cover object-center opacity-45 scale-100"
+              className="object-cover object-[65%_center] opacity-50 scale-100"
             />
           </div>
 
@@ -257,13 +257,13 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-t from-[#0E0E11] via-[#0E0E11]/30 to-[#0E0E11]/70" />
         </div>
 
-        {/* Tipografia Central/Lateral (Estilo Serenity com respiro absoluto) */}
-        <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-12 lg:px-16 w-full my-auto flex flex-col items-center sm:items-end text-center sm:text-right">
+        {/* Tipografia no lado esquerdo (Ocupando o espaço com harmonia visual) */}
+        <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-12 lg:px-16 w-full my-auto flex flex-col items-center sm:items-start text-center sm:text-left">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-            className="max-w-2xl flex flex-col items-center sm:items-end"
+            className="max-w-2xl flex flex-col items-center sm:items-start"
           >
             {/* Título Refinado Serif */}
             <h1
